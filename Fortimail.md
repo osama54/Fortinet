@@ -46,8 +46,35 @@
 ---
 ---
 
+## Email Componenets and Roles: 
 
+### Mail User Agent (MUA): Software application that allows users to send,receive, and read email messages. Interface between user and email system, interacting with Main Transfer Agents (MTA) and Mail Delivery Agents (MDA) to manage email communication. 
+#### MUA typically use SMTP to send emails and IMAP or POP3 to retrieve the email from mail server. Examply: Outlook, Gmail... 
 
+### Mail Transfer Agent (MTA): When email is sent, the MTA receives it from the sender email client or server, determines the best path to the recipient mail server, and then forwards or relays the message. 
+#### Also known as Mail relay
+#### Not all MTAs are full email servers, some MTA exist to relay email and do not host email user accounts. 
+##### Common MTA: Postfix, Microsoft Exchange and FortiMail. 
+
+### Mail Server: Host the users, sends, recieves, stores, and forwards the email over a network using standard protocols. 
+#### Mail server might also support MTA and host user mailboxes.
+#### Common Mail Server: Microsoft Exchange, FortiMail(Server Mode)
+
+<img width="398" height="149" alt="6" src="https://github.com/user-attachments/assets/3990f70d-fe11-4c91-bcf5-4bb79cf0ee56" />
+
+### FortiMail that opert in Gateway mode is an MTA
+### FortiMail that operate in Server is both MTA and destination mail server. 
+#### MTA implement a policy to check the authorization for the users 
+#### MTA do a scan for the emails. 
+#### If MTA don't implement this mechanism, this called open relays, open relays are widely exploited by spammers to send unsolicited spam. 
+
+### FortiMail can work as MTA to scan the mails, and can work as open relay without scan to only forward the mails and also can work as a mail server with MTA (Server Mode). 
+
+---
+---
+---
+---
+---
 
 
 
