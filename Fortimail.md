@@ -76,7 +76,9 @@
 ---
 ---
 
+## DNS 
 
+<img width="233" height="93" alt="7" src="https://github.com/user-attachments/assets/73ba1f21-5efe-4598-836a-a6aef5d6bf37" />
 
 
 
