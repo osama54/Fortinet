@@ -80,10 +80,13 @@
 
 <img width="233" height="93" alt="7" src="https://github.com/user-attachments/assets/73ba1f21-5efe-4598-836a-a6aef5d6bf37" />
 
+### Important DNS Record: 
+#### MX : Mail Exchange: Specifies mail server for a domain (used in domain routing) 
 
-
-
-
+### DNS Role in Email Delivery: 
+####  When MTA need to verify where to send an email, it performs a lookup for a specific type of DNS record on the domain portion of the recipient email address, this DNS record is MX record. 
+##### The MX record are configured on DNS server. 
+##### I may have many MX record, the lowest preferense is better, if the priority same we may use load balancing. 
 
 
 
