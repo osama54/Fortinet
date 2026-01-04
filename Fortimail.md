@@ -113,12 +113,25 @@
 
 <img width="233" height="113" alt="00" src="https://github.com/user-attachments/assets/66f25d67-97f6-4057-badc-2ad429d126a3" />
 
+---
+---
+---
+---
+---
 
+## FortiMail Operation Modes: 
+### Gateway Mode: FortMail provides full MTA functionality. FortiMail will scan all incoming emails. 
+#### DNS MX record change required to redirect all inbound email traffic to the FortiMail. 
+###### All inbound email goees through FortiMails first, then is routed back to mail server. 
+#### For complete protection, all outbound email should be routed through FortiMail for inspection.
+###### FortiMail verifies if the sender of the email is valid and then performs its own DNS MX lookup for delivery unless email forwarding is configured. 
 
+### Server Mode: FortiMail provides full email server and MTA. We can Use it in replacement for retiring email servers. 
+#### Fortimail will store the end-user mailboxes, in addition the FortiMail in server mode provides a complete group calendar, webmail, and other advanced features. 
+##### All emails received ad stored by FortiMail.
 
-
-
-
+### Transparent Mode: Located on the email path to intercept email traffic transparently for inspection. 
+#### No need to chanege the DNS MX or DNAT rules. 
 
 
 
