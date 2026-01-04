@@ -88,11 +88,30 @@
 ##### The MX record are configured on DNS server. 
 ##### I may have many MX record, the lowest preferense is better, if the priority same we may use load balancing. 
 
+### Only Microsoft Outlook and Microsoft Exchange servers use protocol called Messaging Application Programming Interface (MAPI). MAPI is used for both email transmission and retrieval between Outlook and Microsoft Exchange. 
 
+---
+---
 
+### Message Header contain a lot of useful informaition, and often used to gather information or troubleshoot email issues, it contains: 
+##### All hops that the email transfer through 
+#### When i do forward for the email that i received to another email, there two types of forwarding 
+##### Type1: Normal Forwarding, will remove all the old email hops that pass through before i received the email (Destroy the old email header) becuase the MUA  created new headers from the new point of origin.
+##### Type2: Forwarding as an Attachment, the content of message header will remains 
 
+---
+---
 
+## SMTP Authentication: 
+### SMTP did not include any requirements for security mechanisms. Email was transmitted in plaintext by unauthenticated users. 
+#### the AUTH extension was added later to verify sender identity. MTA that support ESMTP can enforce authentication to ensure that only authorized users are allowed to send email. 
+##### This Verifies only the send identity for outbound emails from a protected domain, but it does not prevent spoofing of inbound emails comming from external mail servers. 
 
+###### 1. SMTP: Send message with Cleartext
+###### 2. STARTTLS: SMTP over TLS, doesn't encrypt all the message, start the encryption after the handshake messages, encrypt the sensitive data only. 
+###### 3. SMTPS: Encrypt the entire session, including banner, Helo messages, and server extensions. 
+
+<img width="233" height="113" alt="00" src="https://github.com/user-attachments/assets/66f25d67-97f6-4057-badc-2ad429d126a3" />
 
 
 
