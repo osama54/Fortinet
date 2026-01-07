@@ -133,7 +133,15 @@
 ### Transparent Mode: Located on the email path to intercept email traffic transparently for inspection. 
 #### No need to chanege the DNS MX or DNAT rules. 
 
+---
+---
+---
+---
+---
 
+### If I want to forward the email to FortiMail, i have two sets: 
+#### 1. relay: this is used to access the external domain
+#### 2. route: this is used to access another mail with internal domain 
 
 
 
