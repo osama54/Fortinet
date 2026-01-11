@@ -143,12 +143,29 @@
 #### 1. relay: this is used to access the external domain
 #### 2. route: this is used to access another mail with internal domain 
 
+---
+---
+---
+---
+---
 
+## Access Control & Policies 
+#### This is the first step when SMTP session reach the Fortimail, it allowrd or reject the email before any scanning. 
+#### This is to prevent important vulnerability in the email world "Open Relay" 
 
+### Access Control Roles: 
+#### Receiving Rules: Apply when Fortimail receiving email from Internal/external. 
+#### Delivery Rules: After receiveing the email, the fortimail need to deliver the email, for example will send the email with same IP that receiver or make NAT... 
 
+---
 
+## Receiving Roles 
+#### If SMTP Session doesn't match any rule, the default behaviour is based on the RCPT TO: 
+##### 1. If an email is destined to protected domain, Fortimail relays it.
+##### 2. If an email is not destined to a protected domain, FortiMail rejects it.
 
-
+### Access Receive Rule Actions: 
+<img width="486" height="269" alt="Actions" src="https://github.com/user-attachments/assets/f4641e60-0158-4731-8da8-93dd31b838a0" />
 
 
 
