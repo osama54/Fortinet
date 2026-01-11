@@ -167,8 +167,14 @@
 ### Access Receive Rule Actions: 
 <img width="486" height="269" alt="Actions" src="https://github.com/user-attachments/assets/f4641e60-0158-4731-8da8-93dd31b838a0" />
 
+---
 
+## IP Policy and Recipient-based Policy
+#### Recipient-based Policy take precedence over IP based policy match, unless if "Take precedence over recipient based policy match option enabled in IP based policy.
+##### IP based policy, filter traffic by IP addressess
+##### Recipient-based Policy: filter traffic by email ID. 
 
+<img width="1005" height="186" alt="Reciepent" src="https://github.com/user-attachments/assets/4e4f54e4-4196-43d2-a6cf-888bb6670b8f" />
 
 
 
