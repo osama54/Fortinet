@@ -176,16 +176,36 @@
 
 <img width="1005" height="186" alt="Reciepent" src="https://github.com/user-attachments/assets/4e4f54e4-4196-43d2-a6cf-888bb6670b8f" />
 
+---
+---
+---
+---
+---
 
+## FortiMail Session Profile
+### Session Profile: Focus on the SMTP connection, controlling how email connection are established and filtered before deeper content inspection occurs
+#### Detect Suspicious activity as soon as possiple, allow fortimail take action early.
+#### This is can be done in IP Header and SMTP envelope. 
 
+<img width="693" height="254" alt="SMTP envelope" src="https://github.com/user-attachments/assets/3f67bed9-ea84-4524-8ada-1bbd7e794ef8" />
 
+##### By defualt, there are two main profiles ( inbound / outbound ) 
+##### Session Profile can be applied on IP based policy
+##### Example: I can set config like this email can send only 5 email in specific time.
+##### We can restrict number of connection per client.
 
+### Also I can make like Reputation on each sender IP address in real time, with score is increased the fortimail will reject the emails.
+#### The Score will be saved in fortimail DB
 
+<img width="507" height="137" alt="Reputation" src="https://github.com/user-attachments/assets/013d8150-ab37-48bc-9697-5f303af57d4c" />
 
+#### Also in the FortiGuard IP Reputation Check, there are a global threat intelligence databse to assess the reputation of a sender's IP address in real time
 
+<img width="432" height="122" alt="rEPTATINO2" src="https://github.com/user-attachments/assets/f6021b04-7028-4e56-9187-d2d085a3660b" />
 
+#### Session Profile Config: 
 
-
+<img width="671" height="167" alt="Session Profile Config" src="https://github.com/user-attachments/assets/95962c7b-df4b-4d7b-946b-ad09a9387933" />
 
 
 
