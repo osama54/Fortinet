@@ -207,6 +207,13 @@
 
 <img width="671" height="167" alt="Session Profile Config" src="https://github.com/user-attachments/assets/95962c7b-df4b-4d7b-946b-ad09a9387933" />
 
+---
+
+## Session Profile, Sender Validation:
+### The Validation is done by SPF record and DKIM record.
+#### This is standard validation no only in fortimail 
+##### for the SPF, it is a DNS TXT record that that specifies which mall servers are authorized to send email on behalf of a domain. Prevent Email Spoofing 
+##### to use SFP, domain owner publishes formatted DNS 
 
 
 
