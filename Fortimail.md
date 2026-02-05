@@ -215,13 +215,43 @@
 ##### for the SPF, it is a DNS TXT record that that specifies which mall servers are authorized to send email on behalf of a domain. Prevent Email Spoofing 
 ##### to use SFP, domain owner publishes formatted DNS 
 
+---
+---
 
+# Antivirus Profiles: 
+### Responsible for scanning and removing malicious content from inbound and outbound emails. 
+### Helps to protect agains viruses, malware, spyware, trojans, worms and other malicious content.
+## The Core Purpose: 
+##### To detect and mitigate malware and virus threats in: Email Attachments, Email body content(malicious links, scripts), Email Header, Archive Files. 
+#### It is not like a traditional antivirus scanning, it uses multi-layered to detect and block malware usign several techologies and threat intelligence sources. 
 
+## Main Technologies usid in Fortimail to detect Malware: 
+#### 1. FortiSandox Integration: This is for unknown attacks or zero day or anything coudln't find signature for it. 
+#### 2. FortiNDR Integration: Will check the file behaviour or contents of malware and returned to FortiMail.
+#### 3. FortiIsolator Integration: is browser isolation solution that protects users against zero-day malware and phishing threats that are delivered over the web and in email. 
+##### With FortiIsolator, web content is executed in a remote disposable container and displayed to users. 
+###### Remoteley executes web content and displays it
+###### Creates a virtual air gap bbetween users browsers and websites
+###### Can also be comibned with URL click protect
 
+<img width="712" height="239" alt="FortiIsolator" src="https://github.com/user-attachments/assets/e9f82279-4827-468f-80b9-791459dcd1e8" />
 
+#### 4. Local Malware Detection
+##### Fortimail uses a local sandbox to evaluate executable content that has passed the FortiGuard antivirus signatures. 
 
+### Local Malware Detection Include: 
+#### A. Fortiguard Antivirus Service: 
+##### 1. Signature based Detection
+##### 2. Include Grayware: This is unwanted application, like when we install a program, other programs may also installed directly.
+##### 3. Database updated through FortiGuard Distribution Netwoork (FDN)
 
+#### B. Heuristic: Local sandbox emulation to detect virus-like attributes in files. 
 
+#### C. File Signature Check: 
+
+#### D. Malware Outbreak: 
+##### 1. Uses data analytics by FortiGuard to generate rating information on known.
+##### 2. bad-sender IPs, content and attachments. 
 
 
 
