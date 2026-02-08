@@ -274,7 +274,13 @@
 
 <img width="1280" height="538" alt="Action" src="https://github.com/user-attachments/assets/43a9bc2c-2704-4bd3-bd6f-f6e19b6ff4c2" />
 
+---
+---
+---
+---
 
+## Why I need to enable the Antivirus for the Outbound emails ? 
+### To keeb the MX IP reputation good by prevent malware from leaving your network. 
 
 
 
