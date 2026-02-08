@@ -247,19 +247,28 @@
 
 #### B. Heuristic: Local sandbox emulation to detect virus-like attributes in files. 
 
-#### C. File Signature Check: 
+#### C. File Signature Check: If I some signature i want to block it manually "Emergency Blocking", i need to upload it and enable this feature. 
 
 #### D. Malware Outbreak: 
 ##### 1. Uses data analytics by FortiGuard to generate rating information on known.
 ##### 2. bad-sender IPs, content and attachments. 
 
+## Local Malware Detection Flow: 
 
+<img width="1066" height="484" alt="Malware Detection Flow" src="https://github.com/user-attachments/assets/54c22c6d-a1bc-4287-ae04-3c5b1b9986f7" />
 
+---
 
+### FortiNDR : Performs machine-learning-based threat classification, behavioural analysis, and threat scoring. 
+#### This is ideal for catching advancet persistent threats (APT), or zero day exploits that evade signature and sandbox detecton. 
 
+### FortiSandobx, i have two options to enable it: 
+#### 1. Submit and wait for result: Send the file to sandbox and waiting the sandbox result before sending the email. 
+#### 2. Submit Only: Send it to sandbox but also send the email before waiting the result. 
 
-
-
+### URL Analysis: Enable to send the URLs also not just the files to FortiSandbo and i have two choices: 
+#### 1. All email: Sacn all emails by sandbox. 
+#### 2. Suspicious email: Scan only the suspicious emails. 
 
 
 
