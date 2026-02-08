@@ -1,4 +1,4 @@
-# FortiMail
+ # FortiMail
 
 ### Mail Protocols: 
 
@@ -270,8 +270,9 @@
 #### 1. All email: Sacn all emails by sandbox. 
 #### 2. Suspicious email: Scan only the suspicious emails. 
 
+## Final Action: 
 
-
+<img width="1280" height="538" alt="Action" src="https://github.com/user-attachments/assets/43a9bc2c-2704-4bd3-bd6f-f6e19b6ff4c2" />
 
 
 
