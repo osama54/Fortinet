@@ -282,10 +282,33 @@
 ## Why I need to enable the Antivirus for the Outbound emails ? 
 ### To keeb the MX IP reputation good by prevent malware from leaving your network. 
 
+---
+---
+---
+---
+---
 
+# Antispam Profile 
 
+### Antispam Technique: 
 
+<img width="556" height="239" alt="Antispam1" src="https://github.com/user-attachments/assets/405140f3-0d33-4334-bb33-b06be5e3b984" />
 
+<img width="568" height="218" alt="Antispam2" src="https://github.com/user-attachments/assets/35d5c24b-f484-489b-9547-a8d4b5a20db7" />
+
+### FortiGuard IP Reputation: 
+#### It is part of FortiGuard Anstispam service to identifies known spam sources by IP address. \
+#### The IP of sending MTA will be checked agains FortiGuard Global blocklist database. 
+##### This helps stop spam early at connection level (Save bandwidth & processing) 
+
+#### Optionally: we can enable Extract IP from Received Header: This will check every IP listed in received headear of the email. 
+##### Useful if the spammer hides behind multiple relays. 
+
+Reputation Levels (3 tiers)
+---|---|
+Level 1 (Worst Reputation)| known spammers, infected servers, open relays. 
+Level 2 (Medium Reputation)| Suspicious, possibly compromised, flagged recently
+Level 3 (Lowest Risk)| Not very common spammers, but still questionable
 
 
 
