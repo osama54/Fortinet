@@ -306,7 +306,7 @@
 
 Reputation Levels (3 tiers)
 
----|---|
+|---|---
 Level 1 (Worst Reputation)| known spammers, infected servers, open relays. 
 Level 2 (Medium Reputation)| Suspicious, possibly compromised, flagged recently
 Level 3 (Lowest Risk)| Not very common spammers, but still questionable
