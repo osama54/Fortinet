@@ -305,6 +305,7 @@
 ##### Useful if the spammer hides behind multiple relays. 
 
 Reputation Levels (3 tiers)
+
 ---|---|
 Level 1 (Worst Reputation)| known spammers, infected servers, open relays. 
 Level 2 (Medium Reputation)| Suspicious, possibly compromised, flagged recently
