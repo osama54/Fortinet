@@ -304,7 +304,7 @@
 #### Optionally: we can enable Extract IP from Received Header: This will check every IP listed in received headear of the email. 
 ##### Useful if the spammer hides behind multiple relays. 
 
-Reputation Levels (3 tiers)
+###  Reputation Levels (3 tiers)
 
 Reputation Levels|Possible|Action Recommended
 |---|---|--- 
@@ -312,11 +312,26 @@ Level 1 (Worst Reputation)| known spammers, infected servers, open relays.|Rejec
 Level 2 (Medium Reputation)| Suspicious, possibly compromised, flagged recently|Quarantine or Tag (Admins or users can review)
 Level 3 (Lowest Risk)| Not very common spammers, but still questionable|Quarantine, Tag, or allow
 
+### FortiGuarl URL filtering: checks embededded email urls agains fortigurad cloud-base database of categorized urls. 
+#### If match, fortimail classify as spam/malicious and apply the action. 
 
+<img width="434" height="149" alt="Antispam3" src="https://github.com/user-attachments/assets/d3bfa8a7-b350-4a15-8412-55079858af1b" />
 
+## FortiGuard Spam Outbreak Protection
+### Is a real-time spam detection service provided by FortiGuard. Uses cloud-based intelligence to identify new spam campaigns as soon as they appear.
 
+### Spam outbreak protection can be set on the following: 
+##### 1. set to enable: suspicious email is held in spam outbreak and then re-evluated it. This gives FortiGuard an opportunity to learn about potential spam oubreak and update its database. After timeout for email expires, FortiMail queries the fortiGuard servers again. If the ratings come back as clean, Fortimail releases the email to the receipents, otherwise it applies action. 
 
+##### 2. set to monitor only, email is not deferred, Insted "X-FEAS Spam-outbreak:monitor-only" is inserted as its header, and the email is logged. 
 
+---
+
+### FortiGuard Spam Submission: 
+#### End users can submit suspicous email as spam using Outlook plugin, the email can then be either reviewed by and administrator or sent to FortiGuard for immediate evaluation. 
+
+---
+---
 
 
 
