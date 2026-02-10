@@ -306,11 +306,11 @@
 
 Reputation Levels (3 tiers)
 
-Reputation Levels|Possible
-|---|---
-Level 1 (Worst Reputation)| known spammers, infected servers, open relays. 
-Level 2 (Medium Reputation)| Suspicious, possibly compromised, flagged recently
-Level 3 (Lowest Risk)| Not very common spammers, but still questionable
+Reputation Levels|Possible|Action Recommended
+|---|---|--- 
+Level 1 (Worst Reputation)| known spammers, infected servers, open relays.|Reject (Send SMTP 550 response to client) or Discard 
+Level 2 (Medium Reputation)| Suspicious, possibly compromised, flagged recently|Quarantine or Tag (Admins or users can review)
+Level 3 (Lowest Risk)| Not very common spammers, but still questionable|Quarantine, Tag, or allow
 
 
 
