@@ -357,9 +357,9 @@ Type|Description
 ---|---
 Pending|Created on first delivery attempt, waiting for retry
 Individual|Confirmed entry after retry, speceific to sende/receipiens/IP
-Consolidated(Autoexempts)|Broader entry
+Consolidated(Autoexempts)|To manage high volumes of greylist entries (e.g., when one organization sends email to many users in your organization) by replacing thousands of individual entries with a single entry, thus reducing resource consumption.
 
-
-
-
+Manual Exempt|Auto Exempt
+---|---
+Manual Exempt (Security > Greylist > Exempt): These are user-defined entries that bypass the greylist delay entirely. They are useful for known, large email server farms (e.g., Office 365) that might use different IPs for retries, which could break the automatic, behavior-based process.|Auto Exempt (Monitor > Greylist > Auto Exempt): These are created automatically after a sender has successfully passed the initial greylist delay and subsequent scans, proving they are legitimate. 
 
