@@ -364,20 +364,47 @@ Manual Exempt|Auto Exempt
 Manual Exempt (Security > Greylist > Exempt): These are user-defined entries that bypass the greylist delay entirely. They are useful for known, large email server farms (e.g., Office 365) that might use different IPs for retries, which could break the automatic, behavior-based process.|Auto Exempt (Monitor > Greylist > Auto Exempt): These are created automatically after a sender has successfully passed the initial greylist delay and subsequent scans, proving they are legitimate. 
 
 ---
+---
 
+### Behavior and Header Analysis Techniques: 
+#### Behavior Analysis: Uses Fortiguard Antispam global spam database as a baseline, Compares unknown/undermined emails agains known spam patterns. Look for behavioral similarities ( writing styles, structure, message flow ...etc) rather than just keywords or signatures. 
 
+#### Aggresiveness levels: 
+Level|Effect
+---|---
+High|Most Aggressive, may catch more spam but could risk false positives
+Medium(default)|balanced approach.
+Low|Leaset Aggressive, Fewer false positives but may let more spam pass. 
 
+#### Header Analysis:
 
+<img width="554" height="205" alt="Header " src="https://github.com/user-attachments/assets/ee93d806-86e4-498d-af66-89446ab2619b" />
 
+---
 
+### Business email compromise Antispam Techniques: 3 Techniques,used specifically for improtant business email like CEO, Managers, Very Important people. 
+#### BES is a type of targeted email attack where cybercriminals trick organization into transferring money, revealing sensitive data, or granting access by impersonating trusted people (Like CEOs,CFOs,HR, or suppliers). 
+#### This technique doesn't relay on virus or phishing links but it is depends on Social Enginnering. 
 
+### How FortiMail Protects Agains BEC: 
+#### Fortimail uses special BEC detection techniques, different from standatds spam filters: 
 
+Technique Name|How it work
+---|---
+Weighted Analysis|Cobines Multiple checks(SPF,DMARC,Suspicious Unicode, Malformed email header), Assign score>If threshold met>flagged as BEC
+Imporsonation Analysis|Detects when someone tries to use the display name of executives/important users.
+Cousing Domain|Identifies look-alike domains(e.g., Microso0ft.com, paypa1.com).
+Sender Alignement|ENsures the SMYP sender matches the "From" header (no spoofing mismatch).
 
+### Whigted Analysis: Uses many techniques, and have a fixe thereshold, each technique increase the threshold by a number specifed, if the number reach the fix thereshold will consider as BEC
 
+<img width="680" height="331" alt="Whighted Analysis" src="https://github.com/user-attachments/assets/c8d2274a-527c-421c-9c22-dea334cea062" />
 
+<img width="342" height="247" alt="BEC" src="https://github.com/user-attachments/assets/68582344-86f9-4d74-9d04-246e2bf8b0b0" />
 
+### Impersonation Analysis: Attacker 
 
-
+<img width="658" height="283" alt="impersonation " src="https://github.com/user-attachments/assets/d18bb800-7099-48c3-b713-4b9e2b929f61" />
 
 
 
