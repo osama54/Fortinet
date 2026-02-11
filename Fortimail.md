@@ -333,15 +333,31 @@ Level 3 (Lowest Risk)| Not very common spammers, but still questionable|Quaranti
 ---
 ---
 
+### Greylist Antispam Techniques: 
+#### This technique is temporarily rejects emails from unknown senders for the first time thay try to deliver a message.
+#### When an email arrives from an unknown sender (defined by a "triplet" of sending IP, sender address, and recipient address), the receiving server temporarily rejects it with a 4xx SMTP error code. A legitimate server will retry sending the email later, and on the second attempt the message will accepted.
+##### Many spam bots and malware don't retry, so their email ere effectively blocked.
+##### It's behaviour based filtering rather than content-based 
 
+###### Low maintance: No need for manual Keyword or IP lists 
+###### Saves resource >> Messages blocked at greylist never go through other filters. 
+###### Extra SPAM protection >> The delay gives FortiGuard & DNSBL time to update their span sibnatures/blaklists. 
 
+### How it works: 
+#### Fortimail Looks a 3-part combination 
 
+<img width="670" height="266" alt="Greylist" src="https://github.com/user-attachments/assets/11c5f3a1-5ce8-44b8-8a19-40645691a942" />
 
+### Manual Greylist Exemptions Usage: 1. Bypass greylisting for trusted senders/doamins/partners. 
+#### 2. Mail comes from large email farms /16,/8,etc. where retries could come from many different servers. 
 
+### Types of Greylist Entries
 
-
-
-
+Type|Description
+---|---
+Pending|Created on first delivery attempt, waiting for retry
+Individual|Confirmed entry after retry, speceific to sende/receipiens/IP
+Consolidated(Autoexempts)|Broader entry
 
 
 
