@@ -415,7 +415,24 @@ Sender Alignement|ENsures the SMTP sender matches the "From" header (no spoofing
 ### Sender Alignment: checking if the email really comes from who it looks like
 #### Hackers try to trick you by making the email look like's it's from your boss or comnpany, but in reality it's not.
 
+---
+---
+---
 
+## Heuristic Scan Antispam Techniques: 
+### Is a "smart guessing system" that checks email contents against a set of spam detection rules created by FortiGuard, So instead of relying only on signatures, FortiMial uses rules to detect new or unknown spam. 
+#### These rules are patterins (written in PCRE - Perl Compatible Regular Expressions) that look for things common in spam like: 
+
+    Spammy subject lines ("As seen on national TV", "Lose weight fast!")
+    Known Spam words/phrases in the body
+    Suspicious email formattin
+    Spam tricks inside attachments (like PDFs)
+
+##### How it works: 
+##### in the fortimail config, i need to set to things, Threshold: If the total score reach the threshold will consider this as SPAM.
+##### The second thing i need to set is Percentage: Fortimail have for example 1000 rules to check spam, if I set percentage to 50%, so the fortimal will check agains first 500 top rules only and ignore the older rules. 
+
+<img width="1259" height="526" alt="Heuristic" src="https://github.com/user-attachments/assets/b316adc1-46e7-47aa-bb8f-ef8fc550d2c7" />
 
 
 
