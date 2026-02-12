@@ -394,7 +394,7 @@ Technique Name|How it work
 Weighted Analysis|Cobines Multiple checks(SPF,DMARC,Suspicious Unicode, Malformed email header), Assign score>If threshold met>flagged as BEC
 Imporsonation Analysis|Detects when someone tries to use the display name of executives/important users.
 Cousing Domain|Identifies look-alike domains(e.g., Microso0ft.com, paypa1.com).
-Sender Alignement|ENsures the SMYP sender matches the "From" header (no spoofing mismatch).
+Sender Alignement|ENsures the SMTP sender matches the "From" header (no spoofing mismatch).
 
 ### Whigted Analysis: Uses many techniques, and have a fixe thereshold, each technique increase the threshold by a number specifed, if the number reach the fix thereshold will consider as BEC
 
@@ -402,13 +402,18 @@ Sender Alignement|ENsures the SMYP sender matches the "From" header (no spoofing
 
 <img width="342" height="247" alt="BEC" src="https://github.com/user-attachments/assets/68582344-86f9-4d74-9d04-246e2bf8b0b0" />
 
-### Impersonation Analysis: Attacker 
+### Impersonation Analysis: Attacker change the header of email, so the receipents will see the email is coming from his manager.
+#### I can add manually all importnat emails, or we can use dynamic mode (or both), dynamically learn adn track the mapping of display names and internal email addresses. 
 
 <img width="658" height="283" alt="impersonation " src="https://github.com/user-attachments/assets/d18bb800-7099-48c3-b713-4b9e2b929f61" />
 
+### Cousing Domain: Attackers use this trick to foll users into trusting emails. Looks for following:
+#### Header Detection: Checks cousin domains inside email header (From, Reply-To)
+#### Body Detection: Check cousin domain inside the body of the email (like in URLs or text), example: https://micros0ft-login.com/secure
+#### Auto Detection: Automatically detects cousin domains based on trusted domains it lears
 
-
-
+### Sender Alignment: checking if the email really comes from who it looks like
+#### Hackers try to trick you by making the email look like's it's from your boss or comnpany, but in reality it's not.
 
 
 
