@@ -1,4 +1,4 @@
- # FortiMail
+<img width="958" height="279" alt="image" src="https://github.com/user-attachments/assets/d18a0ccf-07f6-472e-9180-471e860767b9" /> # FortiMail
 
 ### Mail Protocols: 
 
@@ -429,10 +429,101 @@ Sender Alignement|ENsures the SMTP sender matches the "From" header (no spoofing
     Spam tricks inside attachments (like PDFs)
 
 ##### How it works: 
-##### in the fortimail config, i need to set to things, Threshold: If the total score reach the threshold will consider this as SPAM.
+##### in the fortimail config, i need to set tow things, Threshold: If the total score reach the threshold will consider this as SPAM.
 ##### The second thing i need to set is Percentage: Fortimail have for example 1000 rules to check spam, if I set percentage to 50%, so the fortimal will check agains first 500 top rules only and ignore the older rules. 
 
 <img width="1259" height="526" alt="Heuristic" src="https://github.com/user-attachments/assets/b316adc1-46e7-47aa-bb8f-ef8fc550d2c7" />
+
+---
+---
+
+## SURBL and DNSBL Antispam Techniques 
+### SURBL (Spam URL Real-time Block List): Similar to FortiGuard URI Filter ,but uses third party SURBL servers. FortiMail extracts URIs from email messages and sends them to the SURBL servers. The SURBL servers identify if the URIs are known to associated with SPAM.
+#### It cheks the links(URLs) inside the email body.
+
+### DNSBL (DNS-based Block List): Simila to FortiGuard IP reputation scan feature, but it uses third-party DNSBL servers. 
+
+##### SURBL >> Looks inside the email body > check URLs/domains. 
+##### DNSBL >> Looks at the sender IP (SMTP server) > check reputattion of the server sending the email. 
+
+---
+
+## Banned and Safe Word Lists Antispam 
+### Banned word scan: Fortimail scans the subject and message body for the the presence of any word on a list of prohibited words. 
+#### If message contains one or more of the words on the list, FortiMail trats the messages as spam. 
+
+<img width="512" height="166" alt="1" src="https://github.com/user-attachments/assets/137965f7-dd47-4a8d-8193-def748876c05" />
+
+### Safelist Word scan: scans the subject or body of an email for the presence of any word on a list of safe words. If a match is found, Fortimail will pass email from antispam inspections. 
+#### The safelist words take precednece over banned list words if a word matches an entry in both lists. 
+##### Extra Option: Scan PDF attachments: Fortimaill will scan inside pDFs bor banned words. 
+
+---
+
+## Dictionary Scan Antispam Techniques 
+### Advance way to detect spam or unwanted remails by chicking for dictionary words or patterns. 
+### Unlike banned words (which are simple exact matches or wildcards), a dictionary allows you to use profiles with advanced features like: 
+##### Regular Expressions (regex) > very powerfull pattern matching
+##### Scoring system > not just yes/no detection, but a flexible threshold
+
+#### I can use one dictionary profile, or if i have many profiles, i can make them in Dictionary group and select the group
+#### Minimum Dictonary Score: Threshold value: If total number of matches words execeds the threshold, the email is marked SPAM. 
+
+##### The score is based on individual dictionary profile matches, the profile itself not the whole group. 
+### Dictionary: Have already many words lists, like for credit card, i can select to match any word for the credit card and there are two options withing it:
+##### 
+
+### Banned vs Dictionary: 
+
+<img width="479" height="140" alt="bannedword" src="https://github.com/user-attachments/assets/a1bb6140-df4e-4b2b-8b03-cecf35a963e4" />
+
+---
+
+## Image Spam Scan Antispam 
+### FortiMail is capable of detecting spam messages that consist mainly of embedded GIF, JPEG, or PNG images with little or no text in message body. 
+#### The image spam feature analysis the images using fuzzy logic developed by FortiGuard, to determine if the message is spam. 
+#### If we enable aggressive, FortiMail also analysis image attachments too. 
+
+
+---
+
+##  Newsletter Detection Antispam Technique :
+
+<img width="662" height="266" alt="newsletter" src="https://github.com/user-attachments/assets/069384f2-3560-4a11-9085-36255475fedf" />
+
+---
+##  PDF Scanning Antispam Technique : 
+### Spammers may attemps to evade detection by sending messages containing only a PDF attachment. PDF scanning converts only the first page of the PDF document to a format that is suitable for analysis by banned word, heuristic, and image scanning methods.
+#### Note: it scans only the first page of PDF!
+
+
+---
+
+## Bayesian Antispam Techniques 
+### Bayesian scanning: statical technique that uses a trained database of word probabilities to decide if an email is SPAM or Harm(not spam). 
+#### How it works: -Words anr analyzed agains the Bayesian database.
+#### - If many "spam-likely" words are found, the probability score increases toward spam.
+#### - If many "ham-likely" words are found, the probability score decreases toward spam. 
+
+##### Database inf FortiMail:
+###### - Global Bayesian DB: Used for outgoing emails.
+###### - Domain-specific Bayesian DB: Used for incoming email per protected domain. 
+
+### Note: The Bayesian DB must be trained; otherwise resuls may be inaccurate. 
+
+<img width="652" height="284" alt="Bayesian Train" src="https://github.com/user-attachments/assets/f41046c5-d29c-43ec-b64a-6cc15d9515cc" />
+
+---
+---
+---
+
+
+
+
+
+
+
+
 
 
 
