@@ -510,6 +510,7 @@ Sender Alignement|ENsures the SMTP sender matches the "From" header (no spoofing
 ###### - Domain-specific Bayesian DB: Used for incoming email per protected domain. 
 
 ### Note: The Bayesian DB must be trained; otherwise resuls may be inaccurate. 
+#### There is user submission, when user receive spam email report it as SPAM. And there are auto training. 
 
 <img width="652" height="284" alt="Bayesian Train" src="https://github.com/user-attachments/assets/f41046c5-d29c-43ec-b64a-6cc15d9515cc" />
 
