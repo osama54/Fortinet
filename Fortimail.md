@@ -516,6 +516,20 @@ Sender Alignement|ENsures the SMTP sender matches the "From" header (no spoofing
 
 ---
 ---
+
+## Block and Safe Lists
+
+#### FortiMail uses four level of blocklisting and safelisting. The order of processing priority is system, then session, then domain, and finally personal. 
+
+Level|Description
+---|---
+System-level list| Apply to all protected domains
+Domain-Level list| Apply to all users in that protected domain
+Presonal list| releant for the user only
+Session profiles entries| The list entries will effect only email messages being handled by the IP policy that users that session prifle. 
+
+---
+---
 ---
 
 
