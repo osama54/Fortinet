@@ -528,6 +528,8 @@ Domain-Level list| Apply to all users in that protected domain
 Presonal list| releant for the user only
 Session profiles entries| The list entries will effect only email messages being handled by the IP policy that users that session prifle. 
 
+### This will bypass all AntiSpam checks but not for other profile.
+
 ---
 ---
 ---
