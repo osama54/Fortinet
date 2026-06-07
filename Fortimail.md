@@ -598,7 +598,10 @@ Confidential Emails|Subject Contains "Configential" or "Classified"|Encrypt auto
 
 <img width="750" height="217" alt="image" src="https://github.com/user-attachments/assets/56d33d4a-14f0-483c-bf54-3e110fc6b028" />
 
+---
 
+### Notification Profile
+#### We can apply this on any action, like to notify the receipent or receiver user that the email is rejected. 
 
 
 
