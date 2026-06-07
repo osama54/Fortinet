@@ -533,15 +533,44 @@ Session profiles entries| The list entries will effect only email messages being
 ---
 ---
 ---
+---
+---
 
+## Content Profiles 
 
+### Content Profiles:: Is a set of rules used by FortiMail to sacn email messages(subject,body,headers,attachemnts, and file properties) to detect specific patterns, keywords, or file types. Based on match can apply action. 
 
+### Content Profiels are policy driven: 
 
+Action|Descriptio
+---|---
+Prevent|Prohibited data from leaving the organization
+Protect|Sensitive information using encryption
+Enforce Compliance|with regulations(HIPAA, PCI-DSS, GDPR, etc.) 
+Restrict| unwanted or risky attachments
 
+###### Antispam = block spam.
+###### Content Profile = Enforce your business rules on email. 
 
+#### Content Disarm and Reconstruction: Advanced feature in content profile: Fortimail remove potential security risk, like script or attachment, this feature consider all content as danagerous. It is zero day protection technique. 
 
+### Content Profile also includes: 
+#### 1. Archive Handling: How to deal with compressed or packged files ( zip, rar, 7z , tar.gz, gz, cap .. ) 
 
+#### 2. File Password Decryption Options: how fortimail will deal with the encrypted files, or protected by password
+##### This feature allow fortimail to try known passwords(Configured by admin) to open and scan the file. 
 
+#### 3. Content Monitor and Filtering: Allows administrators to inspect and control email messages based on message content. 
+
+--- 
+## Content Profiles - Use Cases: 
+
+Feature|Descriptio|Action
+---|---|---|
+Data Loss Prevention(DLP)|Block outbound email containing keyweords: salary, ssn..|Quarntine + Notify Compliance
+Regulatory Compliance| PCI DSS: Detect 16-digit credit card numbers|Encrypt(IBE/SMIMI) before delivery
+Attachment Restrictions: Block executable files(.exe, .bat, .vbs)|Reject with notification
+Confidential Emails|Subject Contains "Configential" or "Classified"|Encrypt automatically with IBE
 
 
 
