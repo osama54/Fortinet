@@ -586,7 +586,17 @@ Confidential Emails|Subject Contains "Configential" or "Classified"|Encrypt auto
 
 #### If there is compressed file with password, and inside this file there is word with password also, the fortimail will decrypt both of them and apply the content filter after decrypt the word file. 
 
+---
 
+### Content Disarm and Reconstruction (CDR):
+##### * Can remove the potentially hazardous in email meesages and attachment files. 
+##### * Cab also remove all HTML URLs in the email body, or apply click protection and FortiIsolator inspection.
+##### * For text content, Fortimail can use CDR to remove all URLs, or apply click protection and FortiIsolator inspection.
+##### * Can also apply CDR to miscrosoft office and pdf files. 
+##### * URL Click protection, is scan the URL after the user click it. 
+##### * Active Content: means the url with bottom to click, for example if click something xss will work. 
+
+<img width="750" height="217" alt="image" src="https://github.com/user-attachments/assets/56d33d4a-14f0-483c-bf54-3e110fc6b028" />
 
 
 
