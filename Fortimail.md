@@ -555,12 +555,15 @@ Restrict| unwanted or risky attachments
 #### Content Disarm and Reconstruction: Advanced feature in content profile: Fortimail remove potential security risk, like script or attachment, this feature consider all content as danagerous. It is zero day protection technique. 
 
 ### Content Profile also includes: 
-#### 1. Archive Handling: How to deal with compressed or packged files ( zip, rar, 7z , tar.gz, gz, cap .. ) 
+#### 1. Archive Handling: How to deal with compressed or packged files ( ZIP,PKZIP,GZIP,BZIP,TAR,RAR,JAR,CAB,7Z and EGG) 
 
 #### 2. File Password Decryption Options: how fortimail will deal with the encrypted files, or protected by password
 ##### This feature allow fortimail to try known passwords(Configured by admin) to open and scan the file. 
+##### Decryption Options: 1. Look for words in email for passwords, 2. Use a built-in password list, 3. Create a password list. 
 
 #### 3. Content Monitor and Filtering: Allows administrators to inspect and control email messages based on message content. 
+##### In the Antispam, the scan look for the first page only for the dictionary or banned word. 
+##### But in the Content Profile, the scan look for the whole pdf for the words needed.
 
 --- 
 ## Content Profiles - Use Cases: 
@@ -569,12 +572,19 @@ Feature|Descriptio|Action
 ---|---|---|
 Data Loss Prevention(DLP)|Block outbound email containing keyweords: salary, ssn..|Quarntine + Notify Compliance
 Regulatory Compliance| PCI DSS: Detect 16-digit credit card numbers|Encrypt(IBE/SMIMI) before delivery
-Attachment Restrictions: Block executable files(.exe, .bat, .vbs)|Reject with notification
+Attachment Restrictions| Block executable files(.exe, .bat, .vbs)|Reject with notification
 Confidential Emails|Subject Contains "Configential" or "Classified"|Encrypt automatically with IBE
 
+#### Content Profile in Mail Flow: 
+##### Flow order: 
+###### 1. Connection Level; Session Profile (IP Reputation, DNSBL, Graylisting)
+###### 2. Antispam/Antivirus: Spam filtering, virus/malware scanning
+###### 3. Content Profile: Check subject, body attachements, dictionaris, and take action.
+###### 4. Policy Delivery: Forward to mail server, quarantine, or encryption gateway.
 
+--- 
 
-
+#### If there is compressed file with password, and inside this file there is word with password also, the fortimail will decrypt both of them and apply the content filter after decrypt the word file. 
 
 
 
