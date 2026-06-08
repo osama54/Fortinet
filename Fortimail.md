@@ -626,14 +626,47 @@ Confidential Emails|Subject Contains "Configential" or "Classified"|Encrypt auto
 ---
 ---
 
+## Securing Mail Communication: 
 
+<img width="850" height="289" alt="image" src="https://github.com/user-attachments/assets/8ed0989d-a38f-4c31-93b3-323db46c363d" />
 
+### TLS Profile used for Starttls, and need to apply the profile in Access Control Policy. 
+#### If i don't apply any policy, will use the default, which is prefered, i can create tls policy to enforce starttls connection. 
 
+---
+---
+---
+---
+---
 
+## High Avaialability: Fortimail supports two modes: 
+#### Active-Passive HA
 
+#### Active-Active HA: Allows larger clusters, containing up to 24 FortiMail devices. All standby devices synchronize their configuration with the primary device. 
+###### Typically deployed behind a load balancer for increased processing capacity and redundancy
 
+#### Also supports that include mismatched hardware. For example: you can build an active-passive cluster using a FortiMail 200F and a FortiMail 400F.
 
+### In both active-active and active-passive modes, you must always manage the entire cluster's configuration on the primary FortiMail, except for settings that aren't synchronized: 
 
+<img width="1239" height="562" alt="image" src="https://github.com/user-attachments/assets/ab837ade-5477-4411-a424-b59b6bf42e87" />
+
+### FortiMail HA Comparison Table:
+
+<img width="1020" height="306" alt="image" src="https://github.com/user-attachments/assets/c64350d9-1da0-499a-b9a8-559e5a2957c7" />
+
+#### Members os HA cluster in active-active mode dont share logging information or mail queues. It is important to have external storage so all members can have a centralized mail queue and quarantine repository. 
+##### Centralize logging in one location so that logs are easier to search: 
+###### 1. FortiAnalyzer
+###### 2. Syslog Server
+###### 3. Centralized monitoring license feature
+
+### Monitor FortiMail HA Cluster Centrally
+#### The centralized monitoring feature is available only after you apply an MSSP License. Allows to monitor the state and activity of each HA cluster member, including CPU, memory. disk usage, and other mail statistic summaries on the primary FortiMail, also we can enable cross-device log searches across all cluster devices. 
+
+### How to upgrade the devices working in HA Modes : 
+
+<img width="988" height="300" alt="image" src="https://github.com/user-attachments/assets/443a434c-0671-4af7-94e1-6d0470121765" />
 
 
 
