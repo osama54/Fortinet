@@ -603,6 +603,48 @@ Confidential Emails|Subject Contains "Configential" or "Classified"|Encrypt auto
 ### Notification Profile
 #### We can apply this on any action, like to notify the receipent or receiver user that the email is rejected. 
 
+---
+
+### Email Archiving 
+#### Process of capturing, indexing, and securely storing copy of inbound, outbound, and internal emails passing through FortiMail system. 
+
+### Why use FortiMail Archiving? 
+#### 1. Compliance & Legal : Proof of communication history. 
+#### 2. Forensics : Track phishing/Malware spread. 
+#### 3. Storage Optimization : Reduce Primary mail server load. 
+#### 4. Tamper-proof : Archived messages are immutable. 
+
+### Fortimail Support two types of archiving: 
+##### 1. Archiving Using Acton Profiles (Antispam, Content, Antivirius) 
+##### 2. Selective Archiving (Based on policy, archive on what matches policy to save the storage) 
+
+### Use case scenario: Using Dictionary profiles, which are supported by both antispam and content profiles, to monitor and archive emails that contain speceific words or phrases.
+
+---
+---
+---
+---
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
