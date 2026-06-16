@@ -668,6 +668,20 @@ Confidential Emails|Subject Contains "Configential" or "Classified"|Encrypt auto
 
 <img width="988" height="300" alt="image" src="https://github.com/user-attachments/assets/443a434c-0671-4af7-94e1-6d0470121765" />
 
+---
+---
+---
+---
+---
+
+# Maintenanse
+### FortiMail Storage Structure
+#### 1. Flash Memory: Stores FortiMail firmware, current system configuration, and the certificate store. 
+#### 2. Log disk partition: Stores all log data in a dedicated fixed-size partition. 
+#### 3. Mail Disk Partition: used for mail transfer agent(MTA) queues, system quarantine, user data and quarantines, user mailboxes(server modee), IBE messages, and runtime data. 
+
+<img width="586" height="321" alt="image" src="https://github.com/user-attachments/assets/fed7ffc2-6fac-46c0-8b5b-9635af0b2a23" />
+
 
 
 
