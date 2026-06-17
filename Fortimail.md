@@ -682,11 +682,23 @@ Confidential Emails|Subject Contains "Configential" or "Classified"|Encrypt auto
 
 <img width="586" height="321" alt="image" src="https://github.com/user-attachments/assets/fed7ffc2-6fac-46c0-8b5b-9635af0b2a23" />
 
+---
+---
+---
+---
+---
 
+# Troubleshooting: 
 
+<img width="848" height="385" alt="image" src="https://github.com/user-attachments/assets/d471981b-5795-4dd2-a0a4-d58063ceee2d" />
 
+---
 
+<img width="833" height="272" alt="image" src="https://github.com/user-attachments/assets/0cc57960-bf86-4ff2-b614-c935f3a621c7" />
 
+---
+
+<img width="1285" height="509" alt="image" src="https://github.com/user-attachments/assets/affaf134-8b1e-4be0-80b4-9380ef2cb1cf" />
 
 
 
