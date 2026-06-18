@@ -211,9 +211,20 @@
 
 ## Session Profile, Sender Validation:
 ### The Validation is done by SPF record and DKIM record.
+### When we bypass the SPF in session profile, will be bypassed also in antispam even if there enabled. 
+
 #### This is standard validation no only in fortimail 
 ##### for the SPF, it is a DNS TXT record that that specifies which mall servers are authorized to send email on behalf of a domain. Prevent Email Spoofing 
 ##### to use SFP, domain owner publishes formatted DNS 
+
+# SPF: 
+
+<img width="1282" height="556" alt="image" src="https://github.com/user-attachments/assets/1320b441-dc6a-4967-a0ad-f6fc69cb9a11" />
+
+# DKIM:
+
+<img width="1045" height="468" alt="image" src="https://github.com/user-attachments/assets/16d6f415-9536-4753-82c8-1c8755e89f9f" />
+
 
 ---
 ---
