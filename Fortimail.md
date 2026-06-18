@@ -700,11 +700,25 @@ Confidential Emails|Subject Contains "Configential" or "Classified"|Encrypt auto
 
 <img width="1285" height="509" alt="image" src="https://github.com/user-attachments/assets/affaf134-8b1e-4be0-80b4-9380ef2cb1cf" />
 
+---
+---
+---
 
+# Email Archiving
 
+### is the process of capturing, indexing and securely storing a copy of inbound, outbound, and internal emails passing throguh the FortiMail system for compliance, auditing, and legal discovery. 
 
+## Archiving Modes: 
 
+#### 1. Archiving Using Action Profiles
 
+#### 2. Selective Atchiving: Archives only what matches policy, using archiving policies(based on sender, receipient, keywords, domains, attachments types, etc.).
+
+##### We can access the archived email using FortiMail GUI, or also access the archive mailbox using IMAP. 
+
+##### We can export archived emails in .mbox, or .eml formats. We can't delete emails from archive. The only wat to delete archived emails is to formats the mail disk. 
+
+### I need to create mailbox account and archive all emails to this email. 
 
 
 
